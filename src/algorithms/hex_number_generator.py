@@ -7,8 +7,8 @@ def generate_numbers(num_of_hexes: int = 19):
     Generates a list of hex numbers given number of hexes
     Based on gaussian distribution
     """
-    mean = num_of_hexes / 2
-    sigma = num_of_hexes / 8
+    mean = 7
+    sigma = 1
     nums = [n for n in range(2, 13)]
 
     while len(nums) < num_of_hexes:

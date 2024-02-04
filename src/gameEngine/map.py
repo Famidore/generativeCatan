@@ -28,7 +28,7 @@ class CatanMap:
         num_of_clay: int = 4,
         num_of_desert: int = 1,
     ):
-        # self.num_of_hexes = num_of_hexes
+        self.num_of_hexes = num_of_hexes
         # self.num_of_grass = num_of_grass
         # self.num_of_trees = num_of_trees
         # self.num_of_ores = num_of_ores
@@ -72,6 +72,15 @@ class CatanMap:
 
         return hex_list
 
+    def construct_trees(self, graph):
+        nodes_copy = dict(graph.nodes())
+        for node in nodes_copy:
+            for i in range(6):
+                graph.add_node(f"{i}" + str(node), color="black", style="filled")
+                graph.add_edge(node, f"{i}" + str(node))
+
+        return graph
+
     def generate_standard_map(self):
         """
 
@@ -87,14 +96,21 @@ class CatanMap:
             game_map.add_node(
                 hex["label"] + f"{index}",
                 color=hex["color"],
-                pos=hex["position"],
+                # pos=hex["position"],
                 style="filled",
             )
+
+        self.construct_trees(game_map)
+
+        pos = nx.spring_layout(game_map)
+
         nx.draw(
             game_map,
+            pos=pos,
             node_color=[c for n, c in game_map.nodes(data="color")],
             with_labels=True,
             node_shape="d",
+            node_size=20,
         )
         plt.show()
 

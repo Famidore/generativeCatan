@@ -76,8 +76,8 @@ class CatanMap:
         nodes_copy = dict(graph.nodes())
         for node in nodes_copy:
             for i in range(6):
-                graph.add_node(f"{i}" + str(node), color="black", style="filled")
-                graph.add_edge(node, f"{i}" + str(node))
+                graph.add_node(str(node) + f".{i}", color="black", style="filled")
+                graph.add_edge(node, str(node) + f".{i}")
 
         return graph
 
@@ -110,7 +110,7 @@ class CatanMap:
             node_color=[c for n, c in game_map.nodes(data="color")],
             with_labels=True,
             node_shape="d",
-            node_size=20,
+            node_size=50,
         )
         plt.show()
 

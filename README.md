@@ -4,3 +4,7 @@
 
 # generativeCatan
 dupa
+
+# pages
+
+[link to github pages](https://famidore.github.io/generativeCatan/src/vis/)

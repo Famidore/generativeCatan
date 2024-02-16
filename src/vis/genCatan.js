@@ -1,4 +1,3 @@
-
 let tiles = [];
 const tilesLength = 15;
 const tileSideLen = 150;
@@ -42,10 +41,4 @@ function draw() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 } 
-function setup() {
-  createCanvas(800, 800);
-}
-
-function draw() {
-  background(51);
-}
+ 

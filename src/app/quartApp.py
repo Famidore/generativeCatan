@@ -13,7 +13,6 @@ async def index():
 
 @app.route("/catan", methods=["GET", "POST"])
 async def catan():
-    # return await render_template("../../vis/index.html")
     return await render_template("catan.html")
 
 

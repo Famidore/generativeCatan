@@ -1,4 +1,4 @@
-from quart import Quart, render_template, websocket, send_file
+from quart import Quart, render_template, websocket, send_file, make_response
 import os
 import subprocess
 import asyncio
@@ -11,12 +11,6 @@ async def index():
     return await render_template("index.html")
 
 
-# @app.route("/city", methods=["GET", "POST"])
-# async def download_city():
-#     file_path = app.root_path + "\\static\\js\\objects\\simpleCity.obj"
-#     return await send_file(file_path, as_attachment=True)
-
-
 @app.route("/static/<path:path>")
 async def serve_static(path):
     return await send_file(path)
@@ -24,7 +18,15 @@ async def serve_static(path):
 
 @app.route("/catan", methods=["GET", "POST"])
 async def catan():
-    return await render_template("catan.html")
+    with open("src\\app\\config\\ip_addr.txt") as f:
+        ip_addr = f.readline()
+    return await render_template("catan.html", ip_addr=ip_addr)
+
+
+@app.after_request
+async def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    return response
 
 
 if __name__ == "__main__":

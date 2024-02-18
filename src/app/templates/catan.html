@@ -9,12 +9,16 @@
     <link rel="shortcut icon" type="image/x-icon" href="../static/css/genCatanIco.ico">
     <link rel="stylesheet" type="text/css" href="../static/js/assets/style.css">
 
-
+    <script src="https://unpkg.com/@free-side/audioworklet-polyfill/dist/audioworklet-polyfill.js"
+        type="text/javascript"></script>
     <script src="{{url_for('static', filename='/js/libraries/p5.min.js')}}"></script>
     <script src="{{url_for('static', filename='/js/libraries/p5.sound.min.js')}}"></script>
 </head>
 
 <body>
+    <script>
+        let ipAddr = "{{ip_addr}}";
+    </script>
     <script src="{{url_for('static', filename='/js/genCatan.js')}}"></script>
     <script src="{{url_for('static', filename='/js/classes/hex.js')}}"></script>
     <script src="{{url_for('static', filename='/js/classes/road.js')}}"></script>

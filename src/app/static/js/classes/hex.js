@@ -13,7 +13,7 @@ class Hex {
         translate(this.x, this.y, this.z);
         scale(this.scaleValue);
         // rotateX(radians(340));
-        rotateY(radians(45));
+        rotateY(radians(30));
         rotateZ(radians(180));
         model(this.hexModel);
         pop();

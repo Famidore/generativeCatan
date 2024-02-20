@@ -3,8 +3,13 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 # generativeCatan
-dupa
 
-# pages
+This has nothing to do with _The Settlers of Catan™_ multiplayer board game designed by Klaus Teuber.
 
-[link to github pages](https://famidore.github.io/generativeCatan/src/vis/)
+## About
+
+This project is done entirely in `python` and `p5.js`.
+
+## App
+
+The project runs on a `Quart`-based app & `p5.js` framework.

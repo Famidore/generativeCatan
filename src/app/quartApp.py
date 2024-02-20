@@ -1,6 +1,4 @@
-from quart import Quart, render_template, websocket, send_file, make_response
-import os
-import subprocess
+from quart import Quart, render_template, websocket, send_file
 import asyncio
 
 app = Quart(__name__)
@@ -21,12 +19,6 @@ async def catan():
     with open("src\\app\\config\\ip_addr.txt") as f:
         ip_addr = f.readline()
     return await render_template("catan.html", ip_addr=ip_addr)
-
-
-@app.after_request
-async def add_cors_headers(response):
-    response.headers["Access-Control-Allow-Origin"] = "*"
-    return response
 
 
 if __name__ == "__main__":

@@ -9,6 +9,8 @@ class City {
     show(t) {
         if (t == 'village') {
             push();
+            stroke(0);
+            strokeWeight(1);
             fill(255, 0, 0);
             translate(0, 0);
             scale(this.scaleValue);
@@ -19,6 +21,8 @@ class City {
         }
         else if (t == 'city') {
             push();
+            stroke(0);
+            strokeWeight(1);
             fill(255, 0, 0);
             translate(200, 0);
             scale(this.scaleValue);

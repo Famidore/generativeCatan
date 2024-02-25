@@ -2,6 +2,8 @@ let tiles = [];
 const tilesLength = 15;
 const tileSideLen = 150;
 
+let word;
+
 function preload() {
   villageMod = loadModel('http://' + ipAddr + ':5000/static/js/objects/simpleVillage.obj', successCallback = console.log('Successfully loaded a village model'));
   cityMod = loadModel('http://' + ipAddr + ':5000/static/js/objects/simpleCity.obj', successCallback = console.log('Successfully loaded a city model'));
@@ -11,12 +13,12 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-
+  
   village = new City(villageMod, cityMod, scaleValue = 0.1);
   city = new City(villageMod, cityMod, scaleValue = 0.1);
 
   for (element in srcData) {
-    tiles.push(new Hex(srcData[element].position[0] * 75, 5, srcData[element].position[1] * 75, hexMod, 0.5, srcData[element].type, srcData[element].number))
+    tiles.push(new Hex(srcData[element].position[0] * 100, 0, srcData[element].position[1] * 100, hexMod, 0.13, srcData[element].type, srcData[element].number))
   }
 }
 

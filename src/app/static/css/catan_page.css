@@ -1,3 +1,21 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    overflow: hidden;
+}
+
+main {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vw;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -32,6 +50,6 @@ body {
 
 .button:focus {
     outline-color: transparent;
-    outline-style:solid;
+    outline-style: solid;
     box-shadow: 0 0 0 4px #5a01a7;
 }

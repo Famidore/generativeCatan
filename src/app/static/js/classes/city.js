@@ -7,8 +7,10 @@ class City {
 
 
     show(t) {
-        if (t == 'village') {
+        if (t == 'Village') {
             push();
+            stroke(0);
+            strokeWeight(1);
             fill(255, 0, 0);
             translate(0, 0);
             scale(this.scaleValue);
@@ -17,8 +19,11 @@ class City {
             model(this.villageModel);
             pop();
         }
-        else if (t == 'city') {
+
+        else if (t == 'City') {
             push();
+            stroke(0);
+            strokeWeight(1);
             fill(255, 0, 0);
             translate(200, 0);
             scale(this.scaleValue);

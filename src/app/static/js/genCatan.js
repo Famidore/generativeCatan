@@ -18,7 +18,7 @@ function setup() {
   city = new City(villageMod, cityMod, scaleValue = 0.1);
 
   for (element in srcData) {
-    tiles.push(new Hex(srcData[element].position[0] * 100, 0, srcData[element].position[1] * 100, hexMod, 0.13, srcData[element].type, srcData[element].number))
+    tiles.push(new Hex(srcData[element].position[0] * 100, 0, srcData[element].position[1] * 100, hexMod, 0.13, srcData[element].type, srcData[element].number));
   }
 }
 
@@ -28,8 +28,8 @@ function draw() {
   background(69);
   rotateX(radians(340));
 
-  // city.show('city')
-  // city.show('village')
+  city.show('City');
+  city.show('Village');
   for (tile of tiles) {
     tile.show();
   }

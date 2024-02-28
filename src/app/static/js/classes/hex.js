@@ -4,9 +4,6 @@ class Hex {
         this.y = tempY;
         this.z = tempZ;
 
-        // this.x = 20;
-        // this.y = 0;
-        // this.z = 0;
         this.hexModel = tempHexModel;
         this.scaleValue = tempScaleValue;
         this.terrain = tempTerrain;

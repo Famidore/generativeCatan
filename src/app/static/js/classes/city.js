@@ -7,7 +7,7 @@ class City {
 
 
     show(t) {
-        if (t == 'village') {
+        if (t == 'Village') {
             push();
             stroke(0);
             strokeWeight(1);
@@ -19,7 +19,7 @@ class City {
             model(this.villageModel);
             pop();
         }
-        else if (t == 'city') {
+        else if (t == 'City') {
             push();
             stroke(0);
             strokeWeight(1);

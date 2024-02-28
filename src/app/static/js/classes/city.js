@@ -19,6 +19,7 @@ class City {
             model(this.villageModel);
             pop();
         }
+
         else if (t == 'City') {
             push();
             stroke(0);
